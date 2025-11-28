@@ -1162,6 +1162,17 @@ select {
     margin: 4.68% auto 4.9% auto;
   }
 }
+.p-article__area--search {
+  width: 89.3%;
+  min-height: auto;
+  margin: 2rem auto 19px auto;
+  align-items: center;
+}
+@media screen and (min-width: 781px) {
+  .p-article__area--search {
+    margin: 4.68% auto 4.9% auto;
+  }
+}
 @media screen and (min-width: 781px) {
   .p-article__cardList {
     display: flex;

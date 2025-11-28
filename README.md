@@ -30,7 +30,7 @@ wp-content/themes/hamburger-classic/
    - `sidebar-menu`：サイドバー表示用
    - `footer-menu`：フッターリンク表示用
 4. 固定ページ「ホーム」をフロントページに設定（必要に応じて ID やスラッグを `functions.php` と揃える）
-5. 画像／テキストを php ファイルや管理画面から更新
+5. 画像／テキストを php ファイルや管理画面から更新 固定ページヒーロー画像は ACF を利用
 
 ## WordPress カスタマイズ
 
@@ -44,6 +44,17 @@ wp-content/themes/hamburger-classic/
 ## 画像・アセット
 
 `picture/` 配下にヒーロー画像やテクスチャ素材を配置しています。差し替える場合は同名ファイルで置換するか、SCSS/テンプレート側のパスを変更してください。
+
+## プラグイン
+
+- Advanced Custom Fields
+- All-in-One WP Migration and Backup
+- Classic Editor
+- UpdraftPlus
+- WordPress インポートツール
+- WP-PageNavi
+- セキュリティ用プラグイン
+- 自動キャッシュクリアプラグイン
 
 ## テスト
 

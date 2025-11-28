@@ -45,7 +45,7 @@
                     </div>
                 </figure>
             <?php endwhile; else: ?>
-                <p>検索結果が見つかりませんでした。</p>
+                <p class="p-article__area--search">検索結果が見つかりませんでした。</p>
             <?php endif; ?>
         </section>
 

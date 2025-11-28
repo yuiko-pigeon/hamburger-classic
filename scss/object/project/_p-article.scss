@@ -34,6 +34,15 @@
       margin: 4.68% auto 4.9% auto;
     }
   }
+  &__area--search {
+    width: 89.3%;
+    min-height: auto;
+    margin: 2rem auto 19px auto;
+    align-items: center;
+    @include g.tab {
+      margin: 4.68% auto 4.9% auto;
+    }
+  }
   &__cardList {
     @include g.tab {
       display: flex;
