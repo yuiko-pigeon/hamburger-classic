@@ -1,0 +1,102 @@
+@use "../../foundation/global/index" as g;
+
+.c-image {
+  &__threeBurgers--sp {
+    height: 100%;
+    @include g.tab {
+      display: none;
+    }
+  }
+  &__threeBurgers--tb {
+    display: none;
+    @include g.tab {
+      height: 100%;
+      display: block;
+    }
+    @include g.pc {
+      display: none;
+    }
+  }
+  &__threeBurgers--pc {
+    display: none;
+    @include g.pc {
+      display: block;
+      height: 100%;
+    }
+  }
+  &__window {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    aspect-ratio: 336.11/230.53;
+    width: 100%;
+    -o-object-fit: cover;
+    @include g.tab {
+      aspect-ratio: 378.28/354.5;
+    }
+    @include g.pc {
+      aspect-ratio: 677/471;
+    }
+  }
+
+  &__food--upper {
+    display: flex;
+    width: 89.3%;
+    aspect-ratio: 335/124;
+    margin: 0 auto;
+  }
+  &__food--card {
+    display: flex;
+    width: 42.7%;
+    height: 50.6%;
+  }
+  &__food--middleSp {
+    display: block;
+    width: 16.7rem;
+    aspect-ratio: 267/166;
+    @include g.tab {
+      display: none;
+    }
+  }
+  &__food--middleTbPc {
+    display: none;
+    @include g.tab {
+      display: block;
+      width: 36.3rem;
+      aspect-ratio: 581/358;
+    }
+  }
+  &__food--grid {
+    width: 100%;
+    aspect-ratio: 335/205;
+    @include g.tab {
+      aspect-ratio: 349/205;
+    }
+    @include g.pc {
+      aspect-ratio: 438/257;
+    }
+  }
+  &__hero--sp {
+    width: 100%;
+    @include g.tab {
+      display: none;
+    }
+  }
+  &__hero--tb {
+    display: none;
+    @include g.tab {
+      width: 100%;
+      display: block;
+    }
+    @include g.pc {
+      display: none;
+    }
+  }
+  &__hero--pc {
+    display: none;
+    @include g.pc {
+      display: block;
+      width: 100%;
+    }
+  }
+}

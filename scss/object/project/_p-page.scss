@@ -1,0 +1,368 @@
+@use "../../foundation/global/index" as g;
+
+.page {
+  .l-wrapper {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    min-height: 100dvh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13.4375rem 1fr 9.375rem;
+    @include g.tab {
+      grid-template-rows: 13.5625rem 1fr 9.375rem;
+    }
+    @include g.pc {
+      display: grid;
+      grid-template-columns: 80% 20%;
+      min-height: 100dvh;
+    }
+    &.fix {
+      overflow: hidden;
+    }
+  }
+
+  .wp-block-media-text {
+    margin: 0 auto 0 5.34%;
+    width: 89.9%;
+    line-height: 1.485rem;
+    &__content {
+      padding: 0;
+    }
+  }
+
+  .wp-block-columns {
+    margin: 0 auto 0 5.34%;
+    width: 89.9%;
+    line-height: 1.485rem;
+  }
+
+  .wp-block-quote {
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+    width: 89.3%;
+    line-height: 1.485rem; //23.76px
+    background-color: g.$color-middleGray;
+    display: block;
+    @include g.tab {
+      margin-bottom: 3.75rem;
+      width: 85.61%; //714px
+    }
+    @include g.pc {
+      width: 87.12%; //1353px
+    }
+  }
+
+  .wp-block-quote > p {
+    width: 89.25%;
+    padding-top: 1.875rem;
+    margin: 0 auto 1.875rem;
+    @include g.tab {
+      margin-bottom: 3.8125rem; //61px
+      padding-top: 3.125rem; //50px
+    }
+  }
+
+  .wp-block-quote > cite {
+    width: 89.3%;
+    padding-bottom: 1.875rem;
+    font-family: g.$fontMm;
+    line-height: 1.485rem; //23.76px
+    margin: 0 auto;
+    font-style: unset;
+    @include g.tab {
+      padding-bottom: 3.5625rem; //57px
+      width: 85.61%; //714px
+    }
+    @include g.pc {
+      padding-bottom: 2.9375rem; //47px
+      width: 87.12%; //1353px
+    }
+  }
+
+  .first-figure {
+    width: 89.3%;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+    @include g.tab {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  .wp-block-group .wp-block-image .aligncenter {
+    display: block;
+    width: 16.7rem;
+    aspect-ratio: 267/166;
+    margin-top: 1.875rem;
+    @include g.tab {
+      margin: 3.8125rem auto 0 auto;
+      display: block;
+      width: 36.3rem;
+      aspect-ratio: 581/358;
+    }
+    @include g.pc {
+      margin: 3.75rem auto 0 auto;
+    }
+  }
+
+  .wp-block-gallery.has-nested-images
+    figure.wp-block-image:not(#individual-image) {
+    width: auto;
+  }
+
+  .wp-block-table {
+    margin: 3.75rem auto;
+    width: 89.3%;
+    @include g.tab {
+      width: 85.49%; //713px
+    }
+    @include g.pc {
+      width: 87.12%; //1353px
+    }
+    tr td {
+      border: 0.0625rem solid g.$color-gray;
+      padding-top: 0;
+      padding-bottom: 0;
+      &:nth-child(1) {
+        width: 31.7%;
+        padding-left: 1.464rem; //23.43px
+        vertical-align: middle;
+        width: 41.79%;
+        height: 4.8125rem; //77px
+        @include g.tab {
+          width: 30.02%;
+          padding-left: 1.875rem;
+        }
+        @include g.pc {
+          width: 31.7%;
+        }
+      }
+      &:nth-child(2) {
+        vertical-align: middle;
+        padding-left: 1.875rem;
+      }
+    }
+  }
+
+  .wp-block-buttons {
+    margin-left: 5.3%;
+    @include g.tab {
+      margin-left: 7.19%;
+    }
+    @include g.pc {
+      margin-left: 6.44%;
+    }
+  }
+
+  .wp-block-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 26.81rem; //429px
+    max-height: 6.5rem; //104px
+    width: 89.3%;
+    aspect-ratio: 335 / 81;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid g.$color-gray;
+    background: linear-gradient(g.$color-lightBeige, g.$color-darkBeige);
+  }
+
+  .wp-block-button__link {
+    color: g.$color-brown;
+    font-weight: g.$bold;
+    font-size: 1rem;
+    font-family: g.$fontMp;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  //カスタムエディタスタイルここから
+  .is-style {
+    &-text-right {
+      grid-template-columns: 42.7% auto !important;
+      p {
+        padding: 0 0 0 5%;
+      }
+    }
+    &-text-left {
+      grid-template-columns: auto 42.7% !important;
+      p {
+        padding: 0 5% 0 0;
+      }
+    }
+    &-image-upper > img {
+      display: flex;
+      width: 89.3%;
+      aspect-ratio: 335/124;
+      margin: 0 auto;
+      margin-bottom: 1.875rem;
+      @include g.tab {
+        margin-bottom: 3.75rem;
+      }
+    }
+    &-tb-large {
+      margin-bottom: 1.875rem; //30px
+      @include g.tab {
+        margin-bottom: 15.06rem; //241px
+      }
+      @include g.pc {
+        margin-bottom: 3.75rem;
+      }
+    }
+    &-margin-listtop {
+      margin-top: 1rem;
+      @include g.tab {
+        margin-top: 2.875rem;
+      }
+      @include g.pc {
+        margin-top: 3.3125rem;
+      }
+    }
+    &-margin-listbottom {
+      margin-bottom: 1.625rem;
+      @include g.tab {
+        margin-bottom: 3.5rem;
+      }
+      @include g.pc {
+        margin-bottom: 3.5rem;
+      }
+    }
+    &-card-gap {
+      height: 1.875rem !important; //30px
+      @include g.tab {
+        height: 7.31rem !important; //117px
+      }
+      @include g.pc {
+        height: 3.75rem !important; //60px
+      }
+    }
+    &-list-1 {
+      //margin-top:2.0625rem;
+      //margin-bottom:1.5rem;
+      line-height: 1.485rem;
+      margin-left: 11.47%; //43px
+      padding-top: 1.0625rem;
+      @include g.tab {
+        margin-left: 15%;
+        //margin-top: 3.9375rem;
+        //margin-bottom:1.5rem;
+      }
+      @include g.pc {
+        margin-left: 11.47%;
+        // margin-top: 3.375rem;
+        //margin-bottom: 1.5rem;
+      }
+      & > li ul {
+        list-style: auto;
+      }
+      & > li > ul {
+        margin-left: 4.8%;
+        padding-top: 1.0625rem;
+        @include g.tab {
+          margin-left: 2.14%;
+        }
+      }
+    }
+    &-list-2 {
+      line-height: 1.485rem;
+      margin-left: calc(11.47% - 1.25rem);
+      padding-top: 1.0625rem;
+      list-style: none;
+      //margin-bottom: 1.625rem;
+      @include g.tab {
+        margin-left: calc(15% - 1.25rem);
+        //margin-bottom: 3.5rem;
+      }
+      @include g.pc {
+        margin-left: calc(11.47% - 1.25rem);
+        //margin-bottom: 3.5rem;
+      }
+      & > li ul {
+        list-style: none;
+      }
+      & > li > ul {
+        margin-left: 4.8%;
+        padding-top: 1.0625rem;
+        @include g.tab {
+          margin-left: 2.14%;
+        }
+      }
+    }
+    &-group-gray {
+      background-color: g.$color-middleGray;
+      display: block;
+      margin: 0 auto;
+      width: 89.3%;
+      @include g.tab {
+        width: 85.49%; //713px
+      }
+      @include g.pc {
+        width: 87.12%; //1353px
+      }
+    }
+    &-tag-1 {
+      font-family: g.$fontMp;
+      width: 67.76%;
+      line-height: 1.485rem;
+      color: #3c2a10;
+      padding: 3.125rem 0 3.125rem 3.125rem;
+    }
+    &-gallery-9 {
+      gap: 1.25rem !important;
+      --wp--style--unstable-gallery-gap: 1.25rem !important;
+      margin: 0 auto !important;
+      width: 89.3%;
+      @include g.tab {
+        display: grid;
+        width: 86.32%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 1.25rem;
+        column-gap: 1.25rem;
+      }
+      @include g.pc {
+        width: 88.16%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+    }
+    &-link {
+      margin: 1.94rem 0 4.31rem 5.3%;
+      @include g.tab {
+        margin: 3.81rem 0 9.31rem 7.19%;
+      }
+      @include g.pc {
+        margin-left: 6.44%;
+        margin-bottom: 17.125rem; //274px
+      }
+      > div a {
+        cursor: pointer;
+        &:link {
+          color: g.$color-brown;
+          text-decoration: none;
+        }
+        &:visited {
+          color: g.$color-brown;
+          text-decoration: none;
+        }
+        &:hover {
+          color: g.$color-brown;
+          text-decoration: underline;
+          text-decoration-color: g.$color-brown;
+        }
+        &:focus {
+          color: g.$color-brown;
+          text-decoration: none;
+        }
+        &:active {
+          color: g.$color-brown;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

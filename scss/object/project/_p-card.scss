@@ -1,0 +1,288 @@
+@use "../../foundation/global/index" as g;
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-self: center;
+  width: 90.4%;
+  padding-top: 10rem;
+  @include g.tab {
+    padding-top: 12.5rem;
+  }
+  @include g.pc {
+    width: 95%;
+  }
+  &__section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5.3%;
+    @include g.tab {
+      display: flex;
+      width: 50%;
+      /* align-items: center; */
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-top: 0%;
+    }
+  }
+  &__section--right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 13.07%;
+    @include g.tab {
+      display: flex;
+      width: 50%;
+      /* align-items: center; */
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-bottom: 0%;
+    }
+  }
+  &__background--threeBurgers {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    flex-direction: column;
+    position: relative;
+    align-items: end;
+    justify-content: flex-end;
+    background-image: url(../picture/three-burgers-on-brown-wooden-tray-between-white-ceramic-takeout-hero2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 89.3%;
+    aspect-ratio: 335/642;
+    min-height: auto;
+    @include g.tab {
+      aspect-ratio: 616 / 1197;
+      margin-top: 15.5%;
+      margin-bottom: 16.7%;
+      margin-left: 15.5%;
+      width: 79.8%;
+    }
+  }
+  &__background--bigPotato {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    flex-direction: column;
+    position: relative;
+    align-items: end;
+    justify-content: flex-end;
+    background-image: url(../picture/humberger-potato-eatin.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 336 / 642;
+    min-height: auto;
+    width: 89.6%;
+    @include g.tab {
+      margin-top: 15.5%;
+      margin-bottom: 16.7%;
+      margin-right: 15.5%;
+      width: 79.8%;
+      aspect-ratio: 616 / 1197;
+    }
+  }
+  &__title {
+    display: inline-block;
+    font: g.$bold 10.9vw g.$fontR; //41px
+    color: g.$color-lightGray;
+    position: absolute;
+    z-index: 10;
+    top: 0.8125rem; //13px
+    left: 4.48%;
+    line-height: 12.8vw;
+    @include g.tab {
+      top: 0.875rem; //14px
+      left: 3.09%;
+      font-size: 5.28vw;
+      line-height: 6.18vw;
+    }
+    @include g.pc {
+      top: 1.5rem; //24px
+      left: 1.63%;
+      font-size: 4.2vw;
+      line-height: 4.9vw;
+    }
+  }
+  &__title--white {
+    color: g.$color-white;
+    display: flex;
+    font-size: 10.9vw;
+    z-index: 10;
+    position: absolute;
+    top: 0.8125rem; //13px
+    left: 3.87%;
+    line-height: 12.8vw;
+    @include g.tab {
+      top: 1rem;
+      font-size: 5.28vw;
+      line-height: 6.18vw;
+    }
+    @include g.pc {
+      top: 1.75rem; //28px
+      left: 3.41%;
+      font-size: 4.2vw;
+      line-height: 4.9vw;
+    }
+  }
+  &__subcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    height: auto;
+    padding: 2.7%;
+    position: relative;
+    margin-bottom: 4.2%;
+    @include g.tab {
+      width: 91%;
+      margin-bottom: 4.5%;
+    }
+    @include g.pc {
+      width: 95%;
+      margin-bottom: 2.6%;
+    }
+  }
+  &__subtitle {
+    display: flex;
+    font-size: 1.375rem; //22px
+    color: g.$color-brown;
+    margin-bottom: 0.25rem;
+  }
+  &__article {
+    line-height: 1.485rem; //23.76px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: g.$color-brown;
+    font-weight: g.$Mbold; //400
+    font-size: 1rem; //16px
+    height: auto; //% とりあえず
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0;
+  }
+  /*arcive*/
+  &__figure--arcive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    justify-self: center;
+    width: 90.4%;
+    margin: auto;
+    @include g.tab {
+      flex-direction: column;
+      width: 90.4%;
+      display: block;
+    }
+    @include g.pc {
+      width: 87.12%;
+    }
+  }
+  &__arcive {
+    display: grid;
+    grid-template-rows: 230.53px 1fr;
+    flex-direction: column;
+    position: relative;
+    min-height: auto;
+    @include g.tab {
+      grid-template-rows: none;
+      grid-template-columns: 50% 50%;
+      align-items: stretch;
+    }
+  }
+  &__textarea {
+    background-color: g.$color-brown;
+    color: g.$color-white;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+  &__title--arcive {
+    font-size: 20px;
+    line-height: 29.7px;
+    margin-top: 32.47px;
+    margin-bottom: 21px;
+    margin-left: 4.72%;
+    @include g.tab {
+      line-height: 29.7px;
+      margin: 0;
+      padding-top: 8.59%;
+      padding-bottom: 5.56%;
+      padding-left: 8.99%;
+    }
+    @include g.pc {
+      font-size: 1.81vw;
+      line-height: 3.34rem;
+      padding-top: 8.27%;
+      padding-left: 9.31%;
+      padding-bottom: 6.5%;
+    }
+  }
+  &__title--arcive--small {
+    font-size: 1rem;
+    line-height: 23.76px;
+    margin-bottom: 1.85%;
+    margin-left: 4.72%;
+    @include g.tab {
+      line-height: 23.76px;
+      padding-left: 8.99%;
+      padding-bottom: 1.85%;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    @include g.pc {
+      font-size: 1.21vw;
+      line-height: 2.2275rem;
+      padding-bottom: 1.92%;
+      padding-left: 9.31%;
+    }
+  }
+  &__text--arcive {
+    font-weight: g.$Mbold;
+    font-size: 1rem;
+    line-height: 23.76px;
+    width: 90.48%;
+    height: 100%;
+    margin: 0 auto 2.5rem auto;
+    @include g.tab {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 23.76px;
+      width: 75.08%;
+      margin: 0;
+      padding-bottom: 11.9%;
+      padding-left: 8.99%;
+    }
+    @include g.pc {
+      padding-left: 9.31%;
+      padding-bottom: 8.86%;
+      font-size: 0.83vw;
+    }
+  }
+  &__button--area {
+    display: flex;
+    @include g.tab {
+      display: flex;
+      height: 24.3%;
+      justify-content: center;
+      margin-bottom: 11.54%;
+    }
+  }
+  &__areaSingle {
+    margin: 0 auto 0 5.34%;
+    width: 89.9%;
+  }
+  &__textareaSingle--top {
+    width: 54.3%;
+  }
+  &__textareaSingle--bottom {
+    width: 54.3%;
+  }
+}

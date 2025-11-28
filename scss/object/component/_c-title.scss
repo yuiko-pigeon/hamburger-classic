@@ -1,0 +1,46 @@
+@use "../../foundation/global/index" as g;
+
+.c-title {
+  &__hero {
+    display: flex;
+    align-items: center;
+    padding-left: 6.7%;
+    font-size: 9.6vw;
+    color: g.$color-white;
+    @include g.tab {
+      font-size: 4.32vw;
+      padding-left: 10.3%;
+    }
+    @include g.pc {
+      font-size: 2.08vw;
+      padding-left: 5.5%;
+    }
+  }
+  &__arcive {
+    display: block;
+    font-size: 1.75rem; //28px
+    font-weight: g.$bold;
+    line-height: 41.58px;
+    color: g.$color-brown;
+    font-family: g.$fontMm;
+    @include g.tab {
+      font-size: 2.25rem; //36px
+      line-height: 3.34rem; //53.46px
+    }
+  }
+  &__hero--single {
+    color: g.$color-white;
+    font-size: 9.6vw; //36px;
+    position: absolute;
+    margin-left: 6.95%;
+    line-height: 3.34rem; //53.46px
+    @include g.tab {
+      margin-left: 5.375rem;
+      line-height: 5.57rem; //89.1px
+      font-size: 3.75rem; //60px
+    }
+    @include g.pc {
+      margin-left: 5.375rem;
+    }
+  }
+}

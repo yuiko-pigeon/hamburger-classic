@@ -1,0 +1,96 @@
+@use "../foundation/global/index" as g;
+
+.l-header {
+  height: 13.4375rem; //215px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: g.$color-background-beige;
+  @include g.tab {
+    height: 13.5625rem; //217px
+    position: relative;
+  }
+  @include g.pc {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    justify-content: unset;
+    position: unset;
+  }
+  &__article {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include g.pc {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+  }
+  &__title {
+    display: flex;
+    font: g.$bold 2.5rem g.$fontR; //40px
+    color: g.$color-gray;
+    margin: 1.94rem 0 0 0;
+    padding: 0.75rem;
+    @include g.pc {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 4.185%;
+      font-size: 4rem; //64px
+      line-height: 4.6875rem; //75px
+    }
+    > a {
+      cursor: pointer;
+      &:link {
+        color: g.$color-gray;
+        text-decoration: none;
+      }
+      &:visited {
+        color: g.$color-gray;
+        text-decoration: none;
+      }
+      &:hover {
+        color: g.$color-gray;
+        text-decoration: none;
+        text-decoration-color: g.$color-gray;
+      }
+      &:focus {
+        color: g.$color-gray;
+        text-decoration: none;
+      }
+      &:active {
+        color: g.$color-gray;
+        text-decoration: none;
+      }
+    }
+  }
+  &__title__small {
+    display: block;
+    font: g.$bold 1.25rem g.$fontR; //20px
+    color: g.$color-gray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem; //8px
+    background-color: g.$color-background-beige;
+    border: unset;
+    cursor: pointer;
+    @include g.tab {
+      font-size: 2.125rem; //34px
+      position: absolute;
+      right: 3%;
+      top: 9.2%;
+    }
+    @include g.pc {
+      display: none;
+    }
+  }
+}

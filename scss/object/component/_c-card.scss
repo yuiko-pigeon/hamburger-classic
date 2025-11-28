@@ -1,0 +1,40 @@
+@use "../../foundation/global/index" as g;
+
+.c-card {
+  display: flex;
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__link {
+    cursor: pointer;
+    &:link {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    &:visited {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #ffffff;
+      -webkit-text-decoration-color: none;
+      text-decoration-color: none;
+      transform: scale(1.05);
+      display: inline-block;
+    }
+    &:focus {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    &:active {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}

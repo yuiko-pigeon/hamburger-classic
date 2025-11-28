@@ -1,0 +1,93 @@
+@use "../../foundation/global/index" as g;
+
+.c-button {
+  display: block;
+  &__close__area {
+    display: flex;
+    align-items: center;
+    width: 2rem; //32px 2rem
+    /*height: ;//36px 2.25rem*/
+    aspect-ratio: 32/36;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: -100%;
+    transition: all 0.3s linear 0ms;
+    @include g.tab {
+      aspect-ratio: 32/37;
+      top: 1.25rem;
+    }
+    @include g.pc {
+      display: none;
+    }
+    &.fixButton {
+      position: fixed;
+      right: 0.69rem;
+      transition: all 0.3s linear 500ms;
+      @include g.tab {
+        right: 1.56rem;
+      }
+    }
+  }
+  &__close {
+    display: flex;
+    content: "";
+    /*width: 2rem;//32px 2rem*/
+    height: 0.125rem; //2px //36px 2.25rem
+    background-color: aqua;
+    position: relative;
+  }
+  &__close::before {
+    content: "";
+    position: absolute;
+    font-family: g.$fontMp;
+    width: 2.828rem;
+    height: 0.375rem;
+    top: -0.125rem;
+    left: -0.3125rem;
+    background-color: g.$color-gray;
+    transform: rotate(45deg);
+  }
+  &__close::after {
+    content: "";
+    position: absolute;
+    font-family: g.$fontMp;
+    width: 2.828rem;
+    height: 0.375rem;
+    top: -0.125rem;
+    left: -0.3125rem;
+    background-color: g.$color-gray;
+    transform: rotate(-45deg);
+  }
+  &__transmit {
+    border-radius: 45px;
+    border: none;
+    width: 163.16px;
+    height: 42.47px;
+    margin: 0 auto 43.65px auto;
+    @include g.tab {
+      width: 43.14%;
+      margin: 0;
+    }
+    @include g.pc {
+      height: 4.75rem;
+      width: 37.6%;
+    }
+  }
+  &__text {
+    font: g.$bold 1rem g.$fontMp;
+    color: g.$color-gray;
+    text-align: center;
+    line-height: 1.0625rem;
+  }
+  &__bottom {
+    cursor: pointer;
+    max-width: 26.81rem; //429px
+    max-height: 6.5rem; //104px
+    width: 89.3%;
+    aspect-ratio: 335 / 81;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid g.$color-gray;
+    background: linear-gradient(g.$color-lightBeige, g.$color-darkBeige);
+  }
+}
