@@ -33,16 +33,18 @@
       align-items: center;
     }
     &__text--area {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: block;
+      padding: 0 2rem;
       @include g.tab {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         text-align: center;
       }
     }
     &__text--sp {
-      display: contents;
+      display: inline;
       @include g.tab {
         display: none;
       }
@@ -54,7 +56,7 @@
       }
     }
     &__link--bottom {
-      display: contents;
+      display: inline-block;
       @include g.tab {
         display: flex;
       }

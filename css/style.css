@@ -1101,7 +1101,7 @@ select {
 }
 .c-link:hover {
   color: #000000;
-  transform: scale(1.08);
+  transform: scale(1.04);
   -webkit-text-decoration-color: #000000;
           text-decoration-color: #000000;
 }
@@ -3291,18 +3291,20 @@ select {
   align-items: center;
 }
 .error404 .p-page404__text--area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
+  padding: 0 2rem;
 }
 @media screen and (min-width: 781px) {
   .error404 .p-page404__text--area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
 }
 .error404 .p-page404__text--sp {
-  display: contents;
+  display: inline;
 }
 @media screen and (min-width: 781px) {
   .error404 .p-page404__text--sp {
@@ -3318,7 +3320,7 @@ select {
   }
 }
 .error404 .p-page404__link--bottom {
-  display: contents;
+  display: inline-block;
 }
 @media screen and (min-width: 781px) {
   .error404 .p-page404__link--bottom {
