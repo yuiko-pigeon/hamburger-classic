@@ -654,6 +654,7 @@ select {
 }
 .c-card__link {
   cursor: pointer;
+  transition: transform 0.4s ease-out;
 }
 .c-card__link:link {
   color: #ffffff;
