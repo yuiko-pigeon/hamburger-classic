@@ -1,0 +1,23 @@
+@use "../../foundation/global/index" as g;
+
+.c-link {
+  cursor: pointer;
+  transition: transform 0.4s ease-out;
+  &:link {
+    color: g.$color-brown;
+  }
+  &:visited {
+    color: g.$color-brown;
+  }
+  &:hover {
+    color: g.$color-black;
+    transform: scale(1.08);
+    text-decoration-color: g.$color-black;
+  }
+  &:focus {
+    color: g.$color-brown;
+  }
+  &:active {
+    color: g.$color-brown;
+  }
+}
